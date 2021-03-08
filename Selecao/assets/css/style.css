@@ -104,6 +104,51 @@ h1, h2, h3, h4, h5, h6 {
   max-height: ;
 }
 
+
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+#topbar {
+  width:100%;
+  background: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+#topbar .contact-info a {
+  line-height: 1;
+  color: #444;
+  transition: 0.3s;
+}
+
+#topbar .contact-info a:hover {
+  color: #428bca;
+}
+
+#topbar .contact-info i {
+  color: #428bca;
+  padding: 4px;
+}
+
+#topbar .contact-info .icofont-phone {
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+#topbar .social-links a {
+  color: #5c768d;
+  padding: 4px 12px;
+  display: inline-block;
+  line-height: 1px;
+  transition: 0.3s;
+}
+
+#topbar .social-links a:hover {
+  color: #428bca;
+}
+
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -132,7 +177,7 @@ h1, h2, h3, h4, h5, h6 {
 .floats{
   float:right;
 }
-
+/* 
 .nav-menu > ul > li:nth-last-child(2) {
   margin-left:50px;
   transition: 0.3s;
@@ -147,13 +192,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav-menu > ul > li:nth-last-child(2):hover {
   background:orange;
-}
+} */
 
 
 .nav-menu a {
   display: block;
   position: relative;
-  color: #fff;
+  color: black;
   padding: 5px 15px 7px 15px;
   margin-left: 5px;
   transition: 0.3s;
@@ -163,7 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  background: #ef6603;
+  background: lightblue;
   text-decoration: none;
 }
 .nav-menu li:last-child > a:hover {
@@ -208,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color: #ef6603;
+  color: lightblue;
   background: none;
 }
 
@@ -359,6 +404,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -377,7 +425,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   text-align: center;
   position: relative;
-  height: 90vh;
+  height: 75vh;
   padding-top: 60px;
 }
 
@@ -452,7 +500,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-waves {
   display: block;
   width: 100%;
-  height: 60px;
+  height: 80px;
   position: relative;
 }
 
