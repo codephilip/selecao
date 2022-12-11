@@ -950,13 +950,12 @@ section {
 }
 
 .features .nav-link:hover {
-    color: #ef6603;
+    color: cornflowerblue;
 }
 
 .features .nav-link.active {
-    background: #1c2e4a;
+    background: cornflowerblue;
     color: #fff;
-    border-color: #ef6603;
 }
 
 @media (max-width: 768px) {
@@ -1496,7 +1495,7 @@ section {
 .faq .faq-list a {
     display: block;
     position: relative;
-    font-family: #ef6603;
+    color: cornflowerblue;
     font-size: 18px;
     font-weight: 500;
 }
