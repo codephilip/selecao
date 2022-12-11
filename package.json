@@ -1,22 +1,21 @@
 {
-  "name": "selecao",
-  "version": "1.0.0",
-  "description": "clearly different website",
-  "main": "tailwind.config.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codephilip/selecao.git"
-  },
-  "author": "PG",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/codephilip/selecao/issues"
-  },
-  "homepage": "https://github.com/codephilip/selecao#readme",
-  "dependencies": {
-    "tailwindcss": "^3.1.8"
-  }
+    "name": "selecao",
+    "version": "1.0.0",
+    "description": "clearly different website",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/codephilip/selecao.git"
+    },
+    "author": "PG",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/codephilip/selecao/issues"
+    },
+    "homepage": "https://github.com/codephilip/selecao#readme",
+    "dependencies": {
+        "tailwindcss": "^3.1.8"
+    }
 }
