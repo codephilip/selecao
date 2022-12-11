@@ -1,10 +1,4 @@
-/**
-* Template Name: Selecao - v2.1.0
-* Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 /*--------------------------------------------------------------
 # General
@@ -16,7 +10,9 @@ element {
     --dark-blue:
 }
 
-$lightBlue: rgb(84, 176, 216);
+$lightBlue: rgb(84,
+176,
+216);
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
@@ -63,12 +59,12 @@ h6 {
     height: 40px;
     border-radius: 50px;
     background: $lightBlue;
-    color: #fff;
+    color: cornflowerblue;
     transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-    background: #fc7c1f;
+    background: cornflowerblue;
     color: #fff;
 }
 
@@ -90,19 +86,22 @@ h6 {
 
 #topbar {
     /* background: #545454; */
-    background: #89Cff0;
+    background: cornflowerblue;
     padding: 10px 0;
     font-size: 16px;
+    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif;
 }
 
 #topbar .contact-info i {
     font-style: normal;
-    color: #e96b56;
+    color: white;
+    padding-left: 5px;
 }
 
 #topbar .contact-info i:last-child {
     font-style: normal;
-    color: #e96b56;
+    color: white;
     margin-left: 50px;
 }
 
@@ -118,18 +117,19 @@ h6 {
 }
 
 #topbar .contact-info i a:hover {
-    color: #e96b56;
+    color: white;
 }
 
 #topbar .social-links a {
-    color: #bababa;
+    color: white;
     line-height: 0;
+    font-size: 20px;
     transition: 0.3s;
     margin-left: 10px;
 }
 
 #topbar .social-links a:hover {
-    color: white;
+    color: #bababa;
 }
 
 
@@ -165,7 +165,7 @@ h6 {
 }
 
 #header .logo img {
-    padding: 0;
+    padding: 5px;
     margin: 0;
     /* test */
     max-height: 70px;
@@ -229,7 +229,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar li:hover>a {
-    color: #e96b56;
+    color: cornflowerblue;
 }
 
 .navbar .getstarted {
@@ -426,7 +426,7 @@ h6 {
     width: 100%;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(0deg, #374ddb 0%, rgb(201, 208, 255) 100%);
+    background: linear-gradient(0deg, cornflowerblue 0%, rgb(201, 208, 255) 100%);
     padding: 0;
 }
 
@@ -735,7 +735,7 @@ section {
     width: 120px;
     height: 1px;
     display: inline-block;
-    background: #fd9042;
+    background: cornflowerblue;
     margin: 4px 10px;
 }
 
@@ -782,7 +782,7 @@ section {
     left: 0;
     top: 2px;
     font-size: 20px;
-    color: #ef6603;
+    color: cornflowerblue;
     line-height: 1;
 }
 
@@ -800,15 +800,15 @@ section {
     border-radius: 5px;
     transition: 0.3s;
     line-height: 1;
-    color: #ef6603;
+    color: cornflowerblue;
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
     margin-top: 6px;
-    border: 2px solid #ef6603;
+    border: 2px solid cornflowerblue;
 }
 
 .about .content .btn-learn-more:hover {
-    background: #ef6603;
+    background: cornflowerblue;
     color: #fff;
     text-decoration: none;
 }
@@ -1011,7 +1011,8 @@ section {
 
 .cta {
     /* background: #2a2c39; */
-    background: linear-gradient(0deg, hsl(232, 58%, 61%) 0%, #4b5fdf 100%);
+    /* background: linear-gradient(0deg, hsl(232, 58%, 61%) 0%, #4b5fdf 100%); */
+    background: cornflowerblue;
     padding: 80px 0;
 }
 
@@ -1025,7 +1026,7 @@ section {
     color: #fff;
 }
 
-.cta .cta-btn {
+.cta2-btn {
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     font-weight: 700;
@@ -1037,12 +1038,32 @@ section {
     transition: 0.5s;
     margin: 10px;
     color: #fff;
-    background: #ef6603;
+    background: cornflowerblue;
+}
+
+.cta2-btn:hover {
+    background: #fff;
+    color: cornflowerblue;
+}
+
+.cta .cta-btn {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px;
+    background: #fff;
+    color: cornflowerblue;
 }
 
 .cta .cta-btn:hover {
-    background: #fff;
-    color: #ef6603;
+    color: #fff;
+    background: darkblue;
 }
 
 @media (max-width: 1024px) {
@@ -1493,7 +1514,7 @@ section {
 }
 
 .faq .faq-list a.collapse {
-    color: #ef6603;
+    color: cornflowerblue;
 }
 
 .faq .faq-list a.collapsed {
@@ -1501,7 +1522,7 @@ section {
 }
 
 .faq .faq-list a.collapsed:hover {
-    color: #ef6603;
+    color: cornflowerblue;
 }
 
 .faq .faq-list a.collapsed i::before {
@@ -1607,10 +1628,10 @@ section {
 
 .contact .info-box i {
     font-size: 32px;
-    color: #FC7C1F;
+    color: cornflowerblue;
     border-radius: 50%;
     padding: 8px;
-    border: 2px dotted #FC7C1F;
+    border: 2px dotted cornflowerblue;
 }
 
 .contact .info-box h3 {
@@ -1691,7 +1712,7 @@ section {
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-    border-color: #FC7C1F;
+    border-color: cornflowerblue;
 }
 
 .contact .php-email-form input {
@@ -1703,7 +1724,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-    background: #FC7C1F;
+    background: cornflowerblue;
     border: 0;
     border-radius: 50px;
     padding: 10px 24px;
@@ -1712,7 +1733,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-    background: #e6573f;
+    background: cornflowerblue;
 }
 
 @-webkit-keyframes animate-loading {
@@ -2018,7 +2039,8 @@ section {
 --------------------------------------------------------------*/
 
 #footer {
-    background: linear-gradient(0deg, hsl(232, 58%, 61%) 0%, #4b5fdf 100%);
+    /* background: linear-gradient(0deg, hsl(232, 58%, 61%) 0%, #4b5fdf 100%); */
+    background: cornflowerblue;
     padding: 0 0 30px 0;
     color: #fff;
     font-size: 14px;
@@ -2061,18 +2083,20 @@ section {
     font-size: 16px;
     padding: 0 30px;
     margin: 3px;
-    background: #e96b56;
+    background: black;
     color: #fff;
     transition: 0.3s;
     border-radius: 50px;
 }
 
 #footer .footer-newsletter form input[type="submit"]:hover {
-    background: #e6573f;
+    background: black;
 }
 
 #footer .footer-top {
-    background: linear-gradient(0deg, hsl(232, 58%, 61%) 0%, #4b5fdf 100%);
+    /* background: linear-gradient(0deg, hsl(232, 58%, 61%) 0%, cornflowerblue 100%);
+     */
+    background: cornflowerblue;
     border-top: 1px solid #474747;
     border-bottom: 1px solid #474747;
     padding: 60px 0 30px 0;
@@ -2091,7 +2115,7 @@ section {
 }
 
 #footer .footer-top .footer-info p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
     margin-bottom: 0;
     font-family: "Raleway", sans-serif;
@@ -2099,9 +2123,9 @@ section {
 }
 
 #footer .footer-top .social-links a {
-    font-size: 18px;
+    font-size: 20px;
     display: inline-block;
-    background: #545454;
+    background: ;
     color: #fff;
     line-height: 1;
     padding: 8px 0;
@@ -2114,8 +2138,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-    background: #FC7C1F;
-    color: #fff;
+    color: black;
     text-decoration: none;
 }
 
@@ -2140,7 +2163,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
     padding-right: 2px;
-    color: #ec7f6d;
+    color: black;
     font-size: 18px;
     line-height: 1;
 }
@@ -2163,7 +2186,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-    color: #e96b56;
+    color: black;
 }
 
 #footer .footer-top .footer-contact {
@@ -2172,6 +2195,7 @@ section {
 
 #footer .footer-top .footer-contact p {
     line-height: 26px;
+    font-size: 16px;
 }
 
 #footer .copyright {
