@@ -132,6 +132,24 @@ h6 {
     color: #bababa;
 }
 
+.topnav-icons {
+    font-size: 20px;
+}
+
+.topnav-icons span {
+    margin-left: 5px;
+}
+
+.topnav-icons a {
+    margin-left: 5px;
+}
+
+@media screen and (max-width:780px) {
+    .topnav-icons {
+        font-size: 14px;
+    }
+}
+
 
 /*--------------------------------------------------------------
 # Header
@@ -704,6 +722,12 @@ h6 {
     }
 }
 
+@media screen and (max-width:800px) {
+    .google-maps {
+        margin-top: 15px;
+    }
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -996,7 +1020,7 @@ section {
 .features .tab-pane ul i {
     font-size: 20px;
     padding-right: 4px;
-    color: #ef6603;
+    color: cornflowerblue;
 }
 
 .features .tab-pane p:last-child {
@@ -1355,6 +1379,12 @@ section {
 @media (max-width: 767px) {
     .testimonials {
         margin: 30px 10px;
+    }
+}
+
+@media (max-width: 780px) {
+    .small-delete {
+        display: none;
     }
 }
 
