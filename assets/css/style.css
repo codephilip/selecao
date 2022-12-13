@@ -459,6 +459,11 @@ h6 {
     padding-top: 60px;
 }
 
+.hero-text {
+    font-size: 65px;
+    font-family: 'Bebas Neue', cursive;
+}
+
 #hero h2 {
     color: #fff;
     margin-bottom: 30px;
@@ -627,6 +632,12 @@ h6 {
 @media (max-width: 768px) {
     #hero h2 {
         font-size: 28px;
+    }
+    .hero-text {
+        font-size: 50px;
+    }
+    .google-maps {
+        height: 200px;
     }
 }
 
