@@ -637,7 +637,10 @@ h6 {
         font-size: 50px;
     }
     .google-maps {
-        height: 200px;
+        height: 300px;
+    }
+    #hero .carousel-container {
+        height: 80vh;
     }
 }
 
