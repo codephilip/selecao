@@ -852,7 +852,8 @@ section {
 }
 
 .video-box img {
-    padding: 15px 0;
+    padding: 0px;
+    border-radius: 10px;
 }
 
 .about .video-box {
