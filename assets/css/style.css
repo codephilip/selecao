@@ -37,6 +37,14 @@ h6 {
     font-family: "Raleway", sans-serif;
 }
 
+p {
+    font-size: 1.2em;
+}
+
+ul li p {
+    font-size: 1.2em;
+}
+
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -86,7 +94,8 @@ h6 {
 
 #topbar {
     /* background: #545454; */
-    background: cornflowerblue;
+    background: rgb(35, 61, 104);
+    background: linear-gradient(90deg, rgba(35, 61, 104, 1) 0%, rgba(0, 0, 32, 1) 100%, rgba(0, 212, 255, 1) 100%);
     padding: 10px 0;
     font-size: 16px;
     letter-spacing: 1px;
@@ -108,7 +117,7 @@ h6 {
 #topbar .contact-info i a,
 #topbar .contact-info i span {
     padding-left: 5px;
-    color: black;
+    color: white;
 }
 
 #topbar .contact-info i a {
@@ -194,6 +203,7 @@ h6 {
 }
 
 .landing-screen {
+    top: -45px;
     color: white;
     letter-spacing: 1px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -550,7 +560,7 @@ h6 {
 
 #hero .carousel-item::before {
     content: '';
-    background-color: rgba(13, 30, 45, 0.6);
+    background-color: rgba(13, 30, 45, 0.4);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -574,6 +584,35 @@ h6 {
 }
 
 #hero .carousel-content {}
+
+.iframe-header {
+    background: linear-gradient(90deg, rgba(35, 61, 104, 1) 0%, rgba(0, 0, 32, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    width: 500px;
+    height: 50px;
+    margin-top: -50px;
+    margin-left: 150px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    color: white;
+    line-height: 2.5;
+    font-size: 1.2em;
+    font-family: "Poppins", sans-serif;
+}
+
+.iframe-wrapper {
+    margin-left: 150px;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    overflow: hidden;
+}
+
+.iframe {
+    border: 0;
+    margin-top: -150px;
+}
 
 @media (max-width: 992px) {
     #hero,
@@ -635,9 +674,6 @@ h6 {
     }
     .hero-text {
         font-size: 50px;
-    }
-    .google-maps {
-        height: 300px;
     }
     #hero .carousel-container {
         height: 80vh;
@@ -794,6 +830,7 @@ section {
 
 .about {
     padding-top: 80px;
+    font-size: 1.2em
 }
 
 .about .content h3 {
@@ -853,7 +890,10 @@ section {
 
 .video-box img {
     padding: 0px;
-    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border-top-left-radius: 50%;
 }
 
 .about .video-box {
@@ -1050,7 +1090,7 @@ section {
 .cta {
     /* background: #2a2c39; */
     /* background: linear-gradient(0deg, hsl(232, 58%, 61%) 0%, #4b5fdf 100%); */
-    background: cornflowerblue;
+    background: linear-gradient(90deg, rgba(35, 61, 104, 1) 0%, rgba(0, 0, 32, 1) 100%, rgba(0, 212, 255, 1) 100%);
     padding: 80px 0;
 }
 
@@ -1073,15 +1113,16 @@ section {
     display: inline-block;
     padding: 12px 30px;
     border-radius: 50px;
-    transition: 0.5s;
+    transition: background 0.3s;
     margin: 10px;
-    color: #fff;
-    background: cornflowerblue;
+    color: #233d68;
+    background: white;
 }
 
 .cta2-btn:hover {
-    background: #fff;
-    color: cornflowerblue;
+    background: rgb(35, 61, 104);
+    background: rgba(35, 61, 104, 1);
+    color: white;
 }
 
 .cta .cta-btn {
@@ -1096,12 +1137,12 @@ section {
     transition: 0.5s;
     margin: 10px;
     background: #fff;
-    color: cornflowerblue;
+    color: #a52714;
 }
 
 .cta .cta-btn:hover {
     color: #fff;
-    background: darkblue;
+    background: #a52714;
 }
 
 @media (max-width: 1024px) {
@@ -1169,7 +1210,7 @@ section {
 }
 
 .services .description {
-    font-size: 14px;
+    font-size: 1.2em;
     margin-left: 40px;
     line-height: 24px;
     margin-bottom: 0;
@@ -1553,8 +1594,7 @@ section {
 }
 
 .faq .faq-list p {
-    margin-bottom: 20px;
-    font-size: 15px;
+    margin: 20px;
 }
 
 .faq .faq-list a.collapse {
@@ -2084,7 +2124,7 @@ section {
 
 #footer {
     /* background: linear-gradient(0deg, hsl(232, 58%, 61%) 0%, #4b5fdf 100%); */
-    background: cornflowerblue;
+    background: linear-gradient(90deg, rgba(35, 61, 104, 1) 0%, rgba(0, 0, 32, 1) 100%, rgba(0, 212, 255, 1) 100%);
     padding: 0 0 30px 0;
     color: #fff;
     font-size: 14px;
@@ -2140,7 +2180,7 @@ section {
 #footer .footer-top {
     /* background: linear-gradient(0deg, hsl(232, 58%, 61%) 0%, cornflowerblue 100%);
      */
-    background: cornflowerblue;
+    background: linear-gradient(90deg, rgba(35, 61, 104, 1) 0%, rgba(0, 0, 32, 1) 100%, rgba(0, 212, 255, 1) 100%);
     border-top: 1px solid #474747;
     border-bottom: 1px solid #474747;
     padding: 60px 0 30px 0;
