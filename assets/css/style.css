@@ -1014,7 +1014,7 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    box-shadow: 2px 2px 1px silver;
+    box-shadow: 2px 2px 5px silver;
 }
 
 .features .nav-link i {
@@ -1029,11 +1029,11 @@ section {
 }
 
 .features .nav-link:hover {
-    color: cornflowerblue;
+    color: #a52714;
 }
 
 .features .nav-link.active {
-    background: cornflowerblue;
+    background: linear-gradient(90deg, rgba(35, 61, 104, 1) 0%, rgba(0, 0, 32, 1) 100%, rgba(0, 212, 255, 1) 100%);
     color: #fff;
 }
 
@@ -1070,10 +1070,11 @@ section {
 
 .features .tab-pane ul li {
     padding-bottom: 10px;
+    font-size: 1.2em;
 }
 
 .features .tab-pane ul i {
-    font-size: 20px;
+    font-size: 1.2em;
     padding-right: 4px;
     color: cornflowerblue;
 }
@@ -1566,7 +1567,7 @@ section {
 --------------------------------------------------------------*/
 
 .faq {
-    padding: 60px 0;
+    padding: 60px 0px;
 }
 
 .faq .faq-list {
