@@ -362,6 +362,9 @@ ul li p {
     .navbar ul {
         display: none;
     }
+    #map {
+        display: none;
+    }
 }
 
 .navbar-mobile {
