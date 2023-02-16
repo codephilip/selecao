@@ -157,6 +157,9 @@ ul li p {
     .topnav-icons {
         font-size: 14px;
     }
+    #map {
+        display: hidden;
+    }
 }
 
 
