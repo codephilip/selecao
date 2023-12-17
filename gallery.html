@@ -81,10 +81,10 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" href="index.html">About</a></li>
+                <li><a class="nav-link scrollto" href="index.html">About</a></li>
                 <li><a class="nav-link" href="product.html">Our Product</a></li>
 
-                <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li><a class="nav-link active" href="gallery.html">Gallery</a></li>
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             </ul>
             <i style="margin-right:20px;" class="bi bi-list mobile-nav-toggle"></i>
@@ -241,7 +241,7 @@
 
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact scrollto">
-            <div class="container ">
+            <div class="container">
 
                 <div class="row ">
                     <div class="col-lg-6 ">
@@ -272,21 +272,22 @@
 
                 <div class="row ">
 
-                    <div class="col-lg-6 " id="map">
-                        <div class="iframe-contact">
-                            <iframe class="iframe"
+                    <div class="col-lg-6" id="map">
+                        <div class="iframe-contact ">
+                            <iframe class="iframe "
                                 src=" https://www.google.com/maps/d/embed?mid=15hlzTKYDCnvJnjD_GUztcJlb7WqKa98&hl=en&ehbc=2E312F "
-                                width="100%
-                      " height="600 " frameborder="0 " scrolling="no " marginheight="0 " marginwidth="0 "></iframe>
+                                width="100% " height="600 " frameborder="0 " scrolling="no " marginheight="0 "
+                                marginwidth="0 "></iframe>
                         </div>
                     </div>
+
 
 
                     <div class="col-lg-6 ">
 
                         <div class="col-lg-12 ">
-                            <form action="https://formspree.io/f/xknkngbo " method="post " role="form "
-                                id="php-email-form " class="php-email-form ">
+
+                            <form action="https://formspree.io/f/mnqeajev" method="POST" id="my-form php-email-form">
                                 <div class="row ">
                                     <div class="col-md-6 form-group ">
                                         <input type="text " name="name " class="form-control " id="name "
@@ -297,18 +298,13 @@
                                             placeholder="Your Email " required>
                                     </div>
                                 </div>
+
                                 <div class="form-group mt-3 ">
-                                    <input type="text " class="form-control " name="subject " id="subject "
-                                        placeholder="Subject " required>
-                                </div>
-                                <div class="form-group mt-3 ">
-                                    <textarea class="form-control " name="message " rows="5 " placeholder="Message "
+                                    <textarea class="form-control " name="message " rows="10" placeholder="Message "
                                         required></textarea>
                                 </div>
                                 <div class="my-3 ">
-                                    <!-- <div class="loading ">Loading</div> -->
 
-                                    <!-- <div id="sent-message " class="sent-message "></div> -->
                                 </div>
                                 <div class="text-center "><button type="submit ">Send Message</button></div>
                                 <p class="status " id="status "></p>
@@ -321,7 +317,6 @@
             </div>
         </section>
         <!-- End Contact Section -->
-
     </main>
     <!-- End #main -->
     <!-- ======= Footer ======= -->
@@ -368,7 +363,38 @@
     <!-- End Footer -->
 
     <a href="# " class="back-to-top "><i class="ri-arrow-up-line "></i></a>
+    <script>
+        var form = document.getElementById("my-form");
 
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("my-form-status");
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "Thanks for your submission!";
+                    form.reset()
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        } else {
+                            status.innerHTML = "Oops! There was a problem submitting your form"
+                        }
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+            });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/jquery/jquery.min.js "></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
