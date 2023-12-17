@@ -2095,6 +2095,11 @@ section {
 # Portfolio Details
 --------------------------------------------------------------*/
 
+#portfolio {
+    padding: 60px 0;
+
+}
+
 .portfolio-details {
     padding-top: 40px;
 }
