@@ -160,11 +160,25 @@ ul li p {
         font-size: 14px;
     }
 
-    #map {
-        display: hidden;
-    }
 }
 
+@media (max-width:500px) {
+    #email-icon {
+        display: hidden;
+    }
+
+    .topnav-icons-mail {
+        display: hidden;
+    }
+
+    .topnav-icons {
+        display: hidden;
+    }
+
+    #topbar {
+        background-color: green;
+    }
+}
 
 /*--------------------------------------------------------------
 # Header
@@ -220,17 +234,13 @@ ul li p {
 # Navigation Menu
 --------------------------------------------------------------*/
 
-
-/**
-* Desktop Navigation 
-*/
-
 .navbar {
     padding: 0;
 }
 
 .navbar ul {
     margin: 0;
+    margin-right: 20px;
     padding: 0;
     display: flex;
     list-style: none;
@@ -597,7 +607,11 @@ ul li p {
     overflow: hidden;
 }
 
-#hero .carousel-content {}
+@media (max-width: 508px) {
+    #hero h1 {
+        font-size: 25px;
+    }
+}
 
 .iframe-header {
     background: linear-gradient(90deg, rgba(35, 61, 104, 1) 0%, rgba(0, 0, 32, 1) 100%, rgba(0, 212, 255, 1) 100%);
@@ -2356,4 +2370,11 @@ section {
     text-align: center;
     font-size: 13px;
     color: #fff;
+}
+
+
+@media (max-width: 508px) {
+    #topbar {
+        display: none !important;
+    }
 }
