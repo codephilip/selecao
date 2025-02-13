@@ -344,6 +344,243 @@
             background: var(--secondary-color);
             transform: translateY(-2px);
         }
+
+        /* Hero Section Styles */
+        .hero-section {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-background {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transform: scale(1.05);
+            transition: opacity 1s ease, transform 2s ease;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.8) saturate(1.2);
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(0, 0, 0, 0.85),
+                rgba(0, 0, 0, 0.4)
+            );
+            backdrop-filter: blur(2px);
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, #ccc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .primary-hero-btn {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .primary-hero-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .secondary-hero-btn {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .secondary-hero-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(to right, #fff, #ccc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            opacity: 0.7;
+        }
+
+        .map-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Update map container styles */
+.map-container {
+    height: 100%;
+    min-height: 400px; /* Increased from 500px */
+    position: relative;
+    padding: 1rem;
+}
+.map-wrapper {
+    position: relative;
+    height: 100%;
+
+
+    transition: transform 0.3s ease;
+}
+
+
+        .map-badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            background: var(--primary-color);
+            border-radius: 50px;
+        }
+
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 2;
+        }
+
+        .scroll-text {
+            font-size: 0.875rem;
+            opacity: 0.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .scroll-icon {
+            width: 1.5rem;
+            height: 2.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .scroll-icon::before {
+            content: '';
+            position: absolute;
+            top: 0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0.375rem;
+            height: 0.375rem;
+            background: white;
+            border-radius: 50%;
+            animation: scrollIndicator 2s infinite;
+        }
+
+        @keyframes scrollIndicator {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, 1rem);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 6rem;
+            }
+        }
     </style>
 
 </head>
@@ -396,17 +633,70 @@
     <!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="modern-hero">
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="hero-slide active" style="background-image: url('assets/img/poolfencelandingpagebg.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('assets/img/hero-bg.jpg')"></div>
+        </div>
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="fade-in">Premium Pool Safety Solutions</h1>
-            <h2 class="fade-in-delay">Serving the Bay Area Since 1963</h2>
-            <div class="hero-cta">
-                <a href="tel:925-743-0417" class="primary-btn">
-                    <i class="bi bi-telephone"></i> 925-743-0417
-                </a>
-                <a href="#contact" class="secondary-btn scrollto">Get Free Estimate</a>
+        
+        <div class="hero-grid">
+            <div class="hero-content">
+                <span class="hero-badge" data-aos="fade-down">ASTM F-2286-05 Certified</span>
+                <h1 class="hero-title" data-aos="fade-up">Redefining Pool Safety Since 1963</h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Premium safety solutions protecting families across the Bay Area
+                </p>
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="200">
+                    <a href="tel:925-743-0417" class="hero-btn primary-hero-btn">
+                        <i class="bi bi-telephone-fill"></i>
+                        925-743-0417
+                    </a>
+                    <a href="#contact" class="hero-btn secondary-hero-btn">
+                        Get Free Estimate
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <span class="stat-number">60+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10k+</span>
+                        <span class="stat-label">Installations</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfaction</span>
+                    </div>
+                </div>
             </div>
+            
+            <div class="map-container" data-aos="fade-left" data-aos-duration="1000">
+                <div class="map-wrapper">
+                    <div class="map-overlay">
+                        <div class="map-header">
+                            <h3>Service Coverage</h3>
+                            <span class="map-badge">Premier Provider</span>
+                        </div>
+                        <p>Serving the Entire Bay Area with Expert Installation</p>
+                    </div>
+                    <iframe 
+                        src="https://www.google.com/maps/d/embed?mid=15hlzTKYDCnvJnjD_GUztcJlb7WqKa98&hl=en&ehbc=2E312F"
+                        width="100%"
+                        height="100%"
+                        frameborder="0"
+                        loading="lazy"
+                        class="service-map"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator">
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-icon"></div>
         </div>
     </section>
     <!-- End Hero -->
