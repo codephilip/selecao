@@ -206,8 +206,29 @@
         mirror: false
     });
 
-
-
-
+    // Add this to your main.js file
+    document.addEventListener('DOMContentLoaded', function() {
+        // FAQ Functionality
+        const faqButtons = document.querySelectorAll('.faq-button');
+        
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const isOpen = button.classList.contains('active');
+                
+                // Close all FAQs
+                document.querySelectorAll('.faq-button').forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.nextElementSibling.style.height = '0px';
+                });
+                
+                // Open clicked FAQ if it was closed
+                if (!isOpen) {
+                    button.classList.add('active');
+                    answer.style.height = answer.scrollHeight + 'px';
+                }
+            });
+        });
+    });
 
 })(jQuery);
