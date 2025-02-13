@@ -1077,6 +1077,169 @@
                 text-align: center;
             }
         }
+
+        /* Modern About Section Styles */
+        .about-section {
+            padding: 120px 0;
+            background: linear-gradient(to bottom, #f8fafc, #ffffff);
+            overflow: hidden;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary-color);
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: var(--heading-color);
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-color);
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .about-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .feature-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            padding: 0.75rem;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 12px;
+        }
+
+        .feature-text h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
+        }
+
+        .feature-text p {
+            color: var(--text-color);
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .about-cta {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image-container {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .about-image-container:hover .about-image {
+            transform: scale(1.05);
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: 2rem;
+            right: -1rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.2);
+        }
+
+        .experience-badge .years {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-badge .text {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .about-image-wrapper {
+                order: -1;
+            }
+
+            .experience-badge {
+                right: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 80px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-cta {
+                flex-direction: column;
+            }
+
+            .experience-badge {
+                padding: 1rem;
+            }
+
+            .experience-badge .years {
+                font-size: 2rem;
+            }
+        }
     </style>
 
 </head>
@@ -1196,59 +1359,63 @@
 
     <main id="main ">
 
-        <!-- ======= About Section ======= -->
-        <!-- <section id="about " class="about ">
-            <div class="container ">
-
-                <div class="section-title " data-aos="zoom-out ">
-                    <h2>About</h2>
-                    <p>Who we are</p>
-                </div>
-
-                <div class="row content " data-aos="fade-up ">
-                    <div class="col-lg-6 ">
-                        <div class="col-lg-12 video-box ">
-                            <img src="assets/img/businessowner.jpg " class="img-fluid " alt="business owner">
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content" data-aos="fade-right">
+                        <span class="section-badge">Our Story</span>
+                        <h2 class="section-title">Owner-operated  for over 25 years</h2>
+                        <p class="section-subtitle">
+                            As a retired firefighter with a lifelong dedication to community safety, I have spent the past 25 years ensuring families can enjoy their pools with peace of mind. My experience in emergency response has given me a deep understanding of the importance of proactive safety measures, and I bring that expertise to every project. Whether it’s installing secure barriers, conducting safety inspections, or providing expert guidance, my mission is to protect what matters most—your loved ones.
+                            Owner-operated excellence in pool safety for over 25 years</p>
+                        
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="bi bi-shield-check"></i>
+                                <div class="feature-text">
+                                    <h4>Premium Materials</h4>
+                                    <p>Rust, mildew, and corrosion-resistant components built to last</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-award"></i>
+                                <div class="feature-text">
+                                    <h4>Industry Leading Strength</h4>
+                                    <p>75+ pound horizontal force load test certified</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-patch-check"></i>
+                                <div class="feature-text">
+                                    <h4>10 Year Warranty</h4>
+                                    <p>Comprehensive prorated manufacturer's warranty</p>
+                                </div>
+                            </div>
                         </div>
 
+                        <div class="about-cta">
+                            <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
+                            <a href="tel:925-743-0417" class="btn btn-outline">
+                                <i class="bi bi-telephone"></i>
+                                Call Us Today
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0 ">
-                        <p>
-                        <h3>ABOUT</h3>
-                        <strong> Baby Barrier Pool Fence
-                        </strong>originated in 1963, in Florida. Today we offer the strongest and the safest product in
-                        the industry. <br>
-                        </br>
-                        We are owner-operated and have been installing Baby Barrier Pool Fences locally for over 25
-                        Years.
-                        <br></br>
 
-                        You can count on years of trouble-free security with the Baby Barrier Pool Fence:
-
-                        </p>
-                        <a href="assets/img/portfolio/portfolio-9.jpg " class="btn-learn-more venobox ">Check
-                            License</a>
-                        <ul>
-                            <li><i class="ri-check-line "></i>All poles, fittings, and mesh are <strong>manufactured to
-                                    resist rust, mildew, corrosion, rot and fading.</strong></li>
-                            <li><i class="ri-check-line "></i>All hardware is made from <strong>durable brass or
-                                    stainless steel.</strong></li>
-                            <li><i class="ri-check-line "></i>The UV stabilized materials are ideally suited to
-                                <strong>withstand high-moisture, guard against salt water and pool chemical
-                                    environments.</strong>
-                            </li>
-                            <li><i class="ri-check-line "></i>Fence poles have undergone a <strong>horizontal force load
-                                    test with a strength of greater than 75 pounds.</strong></li>
-                            <li><i class="ri-check-line "></i> <strong>10 Year Prorated manufacturer's warranty</strong>
-                                provides you with peace of mind for many years to come.</li>
-                        </ul>
-
+                    <div class="about-image-wrapper" data-aos="fade-left">
+                        <div class="about-image-container">
+                            <img src="assets/img/businessowner.jpg" alt="Baby Barrier Pool Fence Owners" class="about-image">
+                            <div class="experience-badge">
+                                <span class="years">25+</span>
+                                <span class="text">Years of<br>Excellence</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
-        </section> -->
-        <!-- End About Section -->
+        </section>
+
         <!-- ======= Services Section ======= -->
         <section id="services" class="services py-16">
             <div class="container mx-auto px-4">
