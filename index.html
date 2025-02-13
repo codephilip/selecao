@@ -50,6 +50,8 @@
             --text-color: #1f2937;
             --light-bg: #f3f4f6;
             --transition: all 0.3s ease;
+            --header-height: 80px;
+            --announcement-height: 40px;
         }
 
         .modern-hero {
@@ -347,7 +349,7 @@
 
         /* Hero Section Styles */
         .hero-section {
-            min-height: 100vh;
+            min-height: calc(100vh - var(--announcement-height) - var(--header-height));
             position: relative;
             overflow: hidden;
             color: white;
@@ -507,7 +509,7 @@
         /* Update map container styles */
 .map-container {
     height: 100%;
-    min-height: 400px; /* Increased from 500px */
+    min-height: 350px; /* Increased from 500px */
     position: relative;
     padding: 1rem;
 }
@@ -581,56 +583,547 @@
                 gap: 6rem;
             }
         }
+
+        /* Modern Header Styles */
+        .main-header {
+            height: var(--header-height);
+            background: white;
+            position: fixed;
+            top: var(--announcement-height);
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+            transition: top 0.3s ease;
+        }
+
+        .main-header.announcement-hidden {
+            top: 0;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        .main-nav .nav-list {
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+            background: rgba(37, 99, 235, 0.1);
+        }
+
+        .contact-link {
+            background: var(--primary-color);
+            color: white !important;
+        }
+
+        .contact-link:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .header-phone:hover {
+            color: var(--primary-color);
+        }
+/* Modern Footer Styles */
+.main-footer {
+    background: #1f2937;
+    color: white;
+    padding: 6rem 0 2rem;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.footer-info {
+    max-width: 400px;
+}
+
+.footer-logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: 1.5rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links ul,
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+    margin-bottom: 1rem;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.7;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+        /* Premium Header & Footer Styles */
+        .announcement-bar {
+            background: var(--primary-color);
+            color: white;
+            height: var(--announcement-height);
+            font-size: 0.875rem;
+        }
+
+        .announcement-bar .container {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .announcement-content {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quick-contact {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            transition: all 0.2s ease;
+        }
+
+        .contact-link:hover {
+            color: white;
+        }
+
+        .contact-link.highlight {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.25rem 1rem;
+            border-radius: 50px;
+        }
+
+        .main-header {
+            height: var(--header-height);
+            background: white;
+            position: sticky;
+            top: var(--announcement-height);
+            z-index: 1000;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item {
+            font-weight: 500;
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-item:hover {
+            color: var(--primary-color);
+            background: rgba(37, 99, 235, 0.1);
+        }
+
+        .nav-item.active {
+            color: var(--primary-color);
+            background: rgba(37, 99, 235, 0.1);
+        }
+
+        .nav-item.cta {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .nav-item.cta:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Premium Footer Styles */
+        .site-footer {
+            background: linear-gradient(to bottom, #1a1f2e, #0f1219);
+            color: white;
+            margin-top: 6rem;
+        }
+
+        .footer-main {
+            padding: 6rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 4rem;
+        }
+
+        .footer-brand {
+            max-width: 400px;
+        }
+
+        .footer-logo {
+            height: 60px;
+            width: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .brand-tagline {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .certification-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .footer-nav h4,
+        .footer-contact h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .nav-grid a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .nav-grid a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .info-item h5 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-item p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-bottom {
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .nav-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .announcement-bar {
+                display: none;
+            }
+            
+            .main-header {
+                top: 0;
+            }
+            
+            .nav-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-bottom .container {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        /* Add these styles */
+        .menu-toggle {
+            display: none; /* Hide by default on desktop */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-color);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block; /* Show on mobile */
+            }
+
+            .main-nav {
+                display: none; /* Hide nav by default on mobile */
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 1rem;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .main-nav.active {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-item {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 
 </head>
 
 <body>
 
-    <!-- ======= Top Bar ======= -->
-    <section id="topbar" class="topbar d-flex align-items-center">
-        <nav class="container d-flex justify-content-center justify-content-md-between">
-            <div class="contact-info d-flex align-items-center">
-                <i id="email-icon" class="topnav-icons topnav-icons-mail bi bi-envelope d-flex align-items-center"><a
-                        href="mailto:contact@example.com">bbfencepool@gmail.com</a></i>
-                <i class="topnav-icons topnav-icons-phone bi bi-phone d-flex align-items-center ms-4"><span>+1
-                        925-743-0417
-                    </span></i>
+
+    <!-- Ultra Modern Header -->
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-content">
+                <i class="bi bi-shield-check"></i>
+                <span>ASTM F-2286-05 Certified Pool Safety Solutions</span>
             </div>
-            <!-- <div class="social-links d-none d-md-flex align-items-center">
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            </div> -->
-        </nav>
-    </section>
-
-
-    <!-- ======= Header ======= -->
-    <header id="header" class="d-flex align-items-center">
-        <div class="container d-flex justify-content-between align-items-center">
-
-            <div class="logo">
-                <a href="index.html"><img src="assets/img/Baby-Barrier-Pool-Fence-Logo-2.png" alt="baby barrier logo"
-                        class="img-fluid"></a>
-
+            <div class="quick-contact">
+                <a href="mailto:bbfencepool@gmail.com" class="contact-link">
+                    <i class="bi bi-envelope"></i>
+                    <span>bbfencepool@gmail.com</span>
+                </a>
+                <a href="tel:925-743-0417" class="contact-link highlight">
+                    <i class="bi bi-telephone-fill"></i>
+                    <span>925-743-0417</span>
+                </a>
             </div>
         </div>
+    </div>
 
-        <nav id="navbar" class="navbar">
-            <ul>
-                <li><a class="nav-link scrollto active" href="index.html">About</a></li>
-                <li><a class="nav-link" href="product.html">Our Product</a></li>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="assets/img/Baby-Barrier-Pool-Fence-Logo-2.png" alt="Baby Barrier Logo" class="logo">
+            </a>
+            
+            <nav class="main-nav">
+                <a href="index.html" class="nav-item active">About</a>
+                <a href="product.html" class="nav-item">Our Product</a>
+                <a href="gallery.html" class="nav-item">Gallery</a>
+                <a href="#contact" class="nav-item cta">Get Free Estimate</a>
+            </nav>
 
-                <li><a class="nav-link" href="gallery.html">Gallery</a></li>
-                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-            </ul>
-            <i style="margin-right:20px;" class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
-
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-
     </header>
-    <!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
     <section class="hero-section">
@@ -685,7 +1178,7 @@
                     <iframe 
                         src="https://www.google.com/maps/d/embed?mid=15hlzTKYDCnvJnjD_GUztcJlb7WqKa98&hl=en&ehbc=2E312F"
                         width="100%"
-                        height="100%"
+                        height="80%"
                         frameborder="0"
                         loading="lazy"
                         class="service-map"
@@ -920,49 +1413,55 @@
 
     </main>
     <!-- End #main -->
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-
-
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-md-6 footer-contact">
-                        <h4>Contact Us</h4>
-                        <p>
-                            Danville, CA, 94526,<br> United States <br><br>
-                            <strong>Phone:</strong> +1 925-743-0417<br>
-                            <strong>Email:</strong> bbfencepool@gmail.com<br>
-                        </p>
-
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 footer-info">
-                        <h3>About Us</h3>
-                        <p>
-                            We have been installing Baby Barriers locally for over 25 years and are licensed,
-                            bonded, and insured.
-                            <br></br> We are a family owned and operated business from Danville, California.
-                        </p>
-                    </div>
-
+   <!-- Modern Footer -->
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <img src="assets/img/Baby-Barrier-Pool-Fence-Logo-2.png" alt="Baby Barrier Logo" class="footer-logo">
+                <p>Protecting families across the Bay Area with premium pool safety solutions since 1963.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-yelp"></i></a>
                 </div>
             </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="product.html">Our Product</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>
+                        <i class="bi bi-geo-alt"></i>
+                        <span>Danville, CA 94526</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-telephone"></i>
+                        <span>925-743-0417</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-envelope"></i>
+                        <span>bbfencepool@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>BabyBarrier</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-
-                Designed by QuantDesigns
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Baby Barrier Pool Fence. All rights reserved.</p>
+            <p>ASTM F-2286-05 Certified</p>
         </div>
-    </footer>
-    <!-- End Footer -->
-
+    </div>
+</footer>
     <a href="# " class="back-to-top "><i class="ri-arrow-up-line "></i></a>
 
     <!-- Place this script at the end of the body tag -->
@@ -996,6 +1495,42 @@
                 });
             });
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainNav = document.querySelector('.main-nav');
+
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.main-header');
+            const announcementBar = document.querySelector('.announcement-bar');
+            let lastScroll = 0;
+            const scrollThreshold = 50; // Minimum scroll before triggering
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
+                    // Scrolling down
+                    announcementBar.classList.add('hidden');
+                    // Slight delay to match the announcement bar animation
+                    setTimeout(() => {
+                        header.classList.add('announcement-hidden');
+                    }, 50);
+                } else if (currentScroll < lastScroll && currentScroll < scrollThreshold) {
+                    // Scrolling up
+                    header.classList.remove('announcement-hidden');
+                    announcementBar.classList.remove('hidden');
+                }
+
+                lastScroll = currentScroll;
+            });
+        });
     </script>
 
     <!-- Vendor JS Files -->
@@ -1012,4 +1547,4 @@
     <script src="assets/js/main.js "></script>
 </body>
 
-</html>
+</html> 
